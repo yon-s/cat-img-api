@@ -1,0 +1,43 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore the specific database config file.
+/config/database.yml
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore other unneeded files.
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+.env
+
+# Ignore bundler gems.
+/vendor/bundle
+
+# Ignore application's specific configuration file
+/config/credentials.yml.enc
+/config/master.key
+
+# Ignore files related to IDE
+/.vscode
+/.idea/
+/.rubymine*
+/.ruby-version
+/.ruby-gemset
+
+# Ignore node modules
+/node_modules
+
+# Ignore precompiled assets for production environment
+/public/assets
+
+# Ignore SQLite database files
+/db/*.sqlite3
+/db/*.sqlite3-journal
