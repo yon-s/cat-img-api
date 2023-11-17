@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get '/health_check', to: 'health_checks#index'
+  post '/api/upload', to: 'apis#upload_image'
 end
