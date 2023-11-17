@@ -111,6 +111,7 @@ GEM
     minitest (5.20.0)
     msgpack (1.7.2)
     mutex_m (0.2.0)
+    mysql2 (0.5.5)
     net-imap (0.4.5)
       date
       net-protocol
@@ -197,6 +198,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   debug
+  mysql2 (~> 0.5)
   puma (>= 5.0)
   rails (~> 7.1.2)
   sqlite3 (~> 1.4)
