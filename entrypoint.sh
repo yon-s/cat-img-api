@@ -1,15 +1,9 @@
 #!/bin/sh
 set -e
 
-rm -f tmp/pids/server.pid
+rm -f tmp/pids/unicorn.pid
 mkdir -p tmp/sockets
 mkdir -p tmp/pids
-
-until mysqladmin ping -h $DB_HOST -P 3306 -u root --silent; do
-  echo "waiting for mysql..."
-  sleep 3s
-done
-echo "success to connect mysql"
 
 bundle exec rails db:create
 bundle exec rails db:migrate
