@@ -10,12 +10,15 @@ services:
       - '3000:3000'
     volumes:
       - .:/cat-img-api
+      - public-data:/cat-img-api/public
+      - tmp-data:/cat-img-api/tmp
     depends_on:
       - db
     links:
       - db
     environment:
-      RAILS_ENV: development
+      RAILS_ENV: production
+      DB_DATABASE: cat-img-mysql
       DB_USER: root
       DB_PASSWORD: root
       DB_HOST: db
@@ -40,6 +43,11 @@ services:
     restart: always #明示的にstopさせるまでリスタートする。（失敗するたび遅延あり）
     depends_on:
       - web 
+    volumes:
+      - public-data:/cat-img-api/public
+      - tmp-data:/cat-img-api/tmp
 
 volumes:
+  public-data:
   mysql-data:
+  tmp-data:
